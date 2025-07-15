@@ -27,3 +27,10 @@
  }
 
 }
+.custom-menu-item {
+    &.ant-menu-item-selected {
+      background-color: transparent !important; // 保持背景色透明
+      color: #1890ff; // 改变选中项的文字颜色，可按需修改
+      border-bottom: 2px solid #1890ff; // 添加下划线，可按需修改
+    }
+  }
