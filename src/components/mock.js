@@ -8,6 +8,8 @@ const buildTools={
   value:  [
     {
       title: 'Vite',
+      label: 'Vite',
+      disabled:false,
       size:'small',
       avatar: (
         <Avatar
