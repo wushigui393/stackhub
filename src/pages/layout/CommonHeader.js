@@ -4,7 +4,7 @@ import Image from "next/image"
 import { Menu } from 'antd'
 import { useRouter } from 'next/router'
 // Import the named export 'items'
-import { items } from '@/pages/home/index.js' 
+import { items } from '@/pages/home/index.jsx' 
 
 const CommonHeader = () => {
     const router = useRouter()

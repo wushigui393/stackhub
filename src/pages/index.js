@@ -11,7 +11,7 @@
 import React from 'react'
 import { Layout } from 'antd'
 import dataSource from '@/components/mock.js'
-import Card from '@/components/Card.js'
+import Card from '@/components/Card.jsx'
 import TopTab from '@/components/topTab.js'
 import CommonHeader from '@/pages/layout/CommonHeader'
 import CommonFooter from '@/pages/layout/CommonFooter.js'

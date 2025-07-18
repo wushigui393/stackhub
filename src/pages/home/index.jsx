@@ -4,14 +4,14 @@
  * @Author: 吴诗贵 1783627061@qq.com
  * @Date: 2025-04-08 21:36:11
  * @LastEditors: WSG 1783627061@qq.com
- * @LastEditTime: 2025-07-16 10:33:25
+ * @LastEditTime: 2025-07-17 20:15:57
  * @FilePath: \my-next-app\src\pages\home\index.js
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
 import React from 'react'
 import { Layout } from 'antd'
 import dataSource from '@/components/mock.js'
-import Card from '@/components/Card.js'
+import Card from '@/components/Card.jsx'
 import TopTab from '@/components/topTab.js'
 import CommonHeader from '@/pages/layout/CommonHeader'
 import CommonFooter from '@/pages/layout/CommonFooter.js'

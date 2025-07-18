@@ -1086,7 +1086,7 @@ const vueSet={
         
       ),
       description: '基于 Vue.js 的一站式解决方案',
-      value: 'https://nuxt.com/',
+      value: 'https://nuxt.com.cn/',
     },  
     {
       title: 'VueUse',
