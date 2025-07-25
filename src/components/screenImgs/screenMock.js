@@ -9,7 +9,7 @@
 
 // 假设public/screen目录下有01.png到80.png的图片
 const generateScreenImages = () => {
-  const imageCount = 80; // 根据实际图片数量调整
+  const imageCount = 10; // 根据实际图片数量调整
   return Array.from({ length: imageCount }, (_, i) => {
     const num = String(i + 1).padStart(2, '0');
     return {

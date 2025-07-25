@@ -77,7 +77,7 @@ const handleClick=(e,item)=>{
 
 const VisualScreen = () => (
     <Flex justify='space-around'  wrap gap="small">
-        {screenImages.map((item, index) => (
+        { screenImages.map((item, index) => (
           <Card key={index} style={cardStyle} styles={{ body: { padding: 0, overflow: 'hidden' } }} >
              <Dropdown style={moreStyle} menu={{ items:dropItems,onClick  }} >
               <a style={{float:'right'}} onClick={(e) => {
