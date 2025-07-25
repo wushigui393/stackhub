@@ -2,7 +2,7 @@
  * @Author: WSG 1783627061@qq.com
  * @Date: 2025-04-24 14:53:35
  * @LastEditors: WSG 1783627061@qq.com
- * @LastEditTime: 2025-07-14 16:57:43
+ * @LastEditTime: 2025-07-25 15:34:49
  * @FilePath: \my-next-app\src\pages\forum\index.js
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -11,7 +11,6 @@ import { Layout, List, Card, Pagination, Avatar, Tag, Divider, Row, Col } from '
 import { UserOutlined } from '@ant-design/icons'
 import CommonHeader from '@/pages/layout/CommonHeader'
 import CommonFooter from '@/pages/layout/CommonFooter'
-import './index.scss'
 
 
 const { Content, Sider } = Layout
