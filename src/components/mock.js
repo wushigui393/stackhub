@@ -22,6 +22,24 @@ const buildTools={
       ),
       description: 'Vite 是一个超快的前端构建工具，赋能下一代 Web 应用的发展',
       value: 'https://cn.vitejs.dev/',
+      url:'https://cn.vitejs.dev/guide/',
+      dropItems:[
+          {
+            label: 'JavaScript',
+            key: 'javaScript',
+            path:'https://vzation01.wsgawxl.top/'
+          },
+          {
+            label: 'Vue',
+            key: 'vue',
+            path:'https://v3vt.wsgawxl.top/',
+          },
+          {
+            label: 'React',
+            key: 'react',
+            path:'https://rvt.wsgawxl.top/',
+          },
+      ]
     },
     {
       title: 'Webpack',
@@ -35,7 +53,8 @@ const buildTools={
         // <img width={50}  height={50} src="https://cdn.docschina.org/home/logo/webpack-offical.svg"  />
       ),
       description: '一个用于现代 JavaScript 应用程序的 静态模块打包工具',
-      value: 'https://webpack.docschina.org/',
+      value: 'https://www.webpackjs.com/',
+      url:'https://www.webpackjs.com/concepts/'
     },
     {
       title: 'Rollup',
@@ -50,7 +69,8 @@ const buildTools={
 
       ),
       description: '一个用于 JavaScript 的模块打包工具，它将小的代码片段编译成更大、更复杂的代码，例如库或应用程序',
-      value: 'https://rollup.docschina.org/',
+      value: 'https://www.rollupjs.com/',
+      url:'https://www.rollupjs.com/'
     },
     {
       title: 'Gulp',
@@ -220,6 +240,13 @@ const frontEndFrame={
       ),
       description: '用于构建 Web 和原生交互界面的库',
       value: 'https://react.docschina.org/',
+       dropItems:[
+          {
+            label: 'vite + React',
+            key: 'react',
+            path:'https://rvt.wsgawxl.top/',
+          },
+      ]
     },
     {
       title: 'Vue2',
@@ -251,6 +278,13 @@ const frontEndFrame={
       ),
       description: '一款用于构建用户界面的 JavaScript 框架',
       value: 'https://cn.vuejs.org/guide/introduction.html',
+       dropItems:[
+          {
+            label: 'vite+Vue3',
+            key: 'vue3',
+            path:'https://v3vt.wsgawxl.top/',
+          },
+      ]
     },
     {
       title: 'Angular',
@@ -638,6 +672,20 @@ const reactSet={
   href: '#reactSet',
   value:  [
     {
+      title: 'Hooks',
+      size:'small', 
+      avatar: (
+        <Avatar
+        size={32}
+        shape="square"
+        src="https://cdn.docschina.org/home/logo/react.svg"
+      />
+        // <img width={50}  height={50} src=""  />  
+      ),
+      description: 'Redux 是 JavaScript 状态容器，提供可预测化的状态管理',
+      value: 'https://react.docschina.org/reference/react/hooks',
+    },
+     {
       title: 'Redux',
       size:'small', 
       avatar: (
@@ -649,7 +697,8 @@ const reactSet={
         // <img width={50}  height={50} src=""  />  
       ),
       description: 'Redux 是 JavaScript 状态容器，提供可预测化的状态管理',
-      value: 'https://react-redux.nodejs.cn/',
+      value: 'https://www.redux.org.cn/',
+      url:'https://www.redux.org.cn/introduction/',
     },
     {
       title: 'Next.js',
@@ -665,6 +714,7 @@ const reactSet={
       ),
       description: '全栈 React 框架。利用 React 组件的强大功能创建高质量的 Web 应用',
       value: 'https://next.nodejs.cn/docs/',
+      url:'https://nextjs.frontendx.cn/docs/#%E5%AE%89%E8%A3%85',
     },
     {
       title: 'React Router',

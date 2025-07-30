@@ -37,7 +37,7 @@ const CommonHeader = () => {
           label: <Link href={item.link}>{item.label}</Link>
         }))}
         style={{ flex: 1, minWidth: 0, fontSize: '20px', lineHeight: '78px' }}
-        itemClassName="custom-menu-item"
+        // itemClassName="custom-menu-item"
       />
     </header>
   )

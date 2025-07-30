@@ -8,7 +8,7 @@
  * @FilePath: \my-next-app\src\pages\home\index.js
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
-import React from 'react'
+import React,{ memo } from 'react'
 import { Layout } from 'antd'
 import dataSource from '@/components/mock.js'
 import Card from '@/components/Card.jsx'
@@ -20,7 +20,7 @@ import VisualScreen from '@/components/visualScreen/index.js'
 const { Content } = Layout
 
 
-const indexApp = () => {
+const indexApp =memo(() => {
   const cardList = dataSource.map((item, index) => (
     <Card title={item.title} partId={item.key} dataSource={item.value} key={item.key} />
   ))
@@ -35,6 +35,6 @@ const indexApp = () => {
       <CommonFooter />
     </Layout>
   )
-}
+}) 
 
 export default indexApp

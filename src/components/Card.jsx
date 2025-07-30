@@ -2,7 +2,7 @@
  * @Author: 吴诗贵 1783627061@qq.com
  * @Date: 2025-04-10 10:10:27
  * @LastEditors: WSG 1783627061@qq.com
- * @LastEditTime: 2025-07-16 14:37:16
+ * @LastEditTime: 2025-07-30 16:06:05
  * @FilePath: \my-next-app\src\components\Card.js
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -10,6 +10,14 @@ import { CheckCard } from '@ant-design/pro-components'
 import { useState } from 'react'
 import { Tooltip } from 'antd'
 import RightDropdown from '@/components/rightDropdown'
+
+const dropdownStyle={
+    position: 'absolute',
+    top: 0,
+    right: 0,
+    // zIndex: 1000,
+    border: '1px solid #eee',
+}
 
 const Card=(props)=>{
     const { title, dataSource,partId } = props
@@ -20,19 +28,21 @@ const Card=(props)=>{
     const [dropVal, setDropVal] = useState(false);
     const handleChange = (checked) => {
       if (['vue'].includes(dropVal)) {
-       return  window.open('https://gitee.com/wu_shigui/xs-admin', '_blank'),setDropVal(false)
+    //    return  window.open('https://gitee.com/wu_shigui/xs-admin', '_blank'),setDropVal(false)
       }
-      console.log(990,dropVal);
-      // return
+      console.log(990,checked,dropVal);
       if (typeof checked === 'string' && !dropVal) {
           window.open(checked, '_blank')
           // 新增：打开新窗口后，将选中状态置为 null
           setSelectedValue(null)
       }
-        // console.log('checked', checked)
     }
     const handleChildData=(e)=>{
-        setDropVal(e)
+        // setDropVal(e)
+    }
+     // 新增阻止事件冒泡的处理函数
+    const handleClick = (e) => {
+        e.stopPropagation();
     }
     return (
         <div
@@ -49,22 +59,24 @@ const Card=(props)=>{
                     ...item,
                     description: (
                         <div>
-                        <Tooltip placement="bottomRight" title={item.description} color='rgba(36, 189, 255,1)'>
-                            <div
-                                style={{
-                                    display: '-webkit-box',
-                                    WebkitBoxOrient: 'vertical',
-                                    WebkitLineClamp: 2,  // 限制显示两行
-                                    overflow: 'hidden',
-                                    textOverflow: 'ellipsis', // 超出部分用...表示
-                                }}
-                            >
-                                {item.description}
-                            </div>
-                        </Tooltip>
-                        <div style={{ position: 'absolute', top: 0, right: 0 }}>
-                              <RightDropdown  onSendData={handleChildData} />
-                        </div>
+                            <Tooltip placement="bottomRight" title={item.description} color='rgba(36, 189, 255,1)'>
+                                <div
+                                    style={{
+                                        display: '-webkit-box',
+                                        WebkitBoxOrient: 'vertical',
+                                        WebkitLineClamp: 2,  // 限制显示两行
+                                        overflow: 'hidden',
+                                        textOverflow: 'ellipsis', // 超出部分用...表示
+                                    }}
+                                >
+                                    {item.description}
+                                </div>
+                            </Tooltip>
+                            {item.dropItems && (
+                                <div style={dropdownStyle} onClick={handleClick}>
+                                    <RightDropdown  item={item} onSendData={handleChildData} onClick={handleClick} />
+                                </div>
+                            )}
                         </div>   
                     )
                 }))}
