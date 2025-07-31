@@ -83,5 +83,5 @@ const ForumPage = memo(() => {
   )
 })
 // 显式设置 displayName
-ForumTab.displayName = 'ForumPage';
+ForumPage.displayName = 'ForumPage';
 export default ForumPage

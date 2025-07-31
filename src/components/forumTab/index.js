@@ -25,5 +25,8 @@ const  ForumTab =({dataSource,changeTab}) => {
          </Affix>
     )
 }
+// 显式设置 displayName
+ForumTab.displayName = 'ForumTab';
+
 
 export default ForumTab;
