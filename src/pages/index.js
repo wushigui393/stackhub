@@ -36,5 +36,6 @@ const indexApp =memo(() => {
     </Layout>
   )
 }) 
-
+// 显式设置 displayName
+indexApp.displayName = 'indexApp';
 export default indexApp

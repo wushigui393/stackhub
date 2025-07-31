@@ -53,5 +53,6 @@ const Home = memo(() => {
     </Layout>
   )
 })
-
+// 显式设置 displayName
+ForumTab.displayName = 'Home';
 export default Home
