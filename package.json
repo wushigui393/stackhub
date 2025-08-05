@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build",
+    "build": "npm run compress-images && next build",
+    "compress-images": "node compress-images.js",
     "export": "npm run build && next export",
     "start": "next start",
     "lint": "next lint"

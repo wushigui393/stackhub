@@ -4,11 +4,11 @@
  * @Author: 吴诗贵 1783627061@qq.com
  * @Date: 2025-04-08 21:36:11
  * @LastEditors: WSG 1783627061@qq.com
- * @LastEditTime: 2025-07-30 09:44:38
+ * @LastEditTime: 2025-07-31 09:57:58
  * @FilePath: \my-next-app\src\pages\home\index.js
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
-import React,{ memo } from 'react'
+import React,{ memo,Suspense } from 'react'
 import { Layout } from 'antd'
 import dataSource from '@/components/mock.js'
 import Card from '@/components/Card.jsx'
@@ -46,8 +46,10 @@ const Home = memo(() => {
     <Layout>
       <CommonHeader />
       <Content style={{ minHeight: '82vh', background: '#fff', overflow: 'auto' }}>
-        <TopTab dataSource={dataSource} />
-        {cardList}
+        <Suspense fallback={<div>Loading...</div>}>
+          <TopTab dataSource={dataSource} />
+          {cardList}
+        </Suspense>
       </Content>
       <CommonFooter />
     </Layout>
