@@ -2,8 +2,8 @@
 /*
  * @Author: WSG 1783627061@qq.com
  * @Date: 2025-07-15 10:33:16
- * @LastEditors: WSG 1783627061@qq.com
- * @LastEditTime: 2025-07-29 16:26:02
+ * @LastEditors: wushigui393 1783627061@qq.com
+ * @LastEditTime: 2025-08-07 17:51:40
  * @FilePath: \my-next-app\src\components\visualScreen\index.js
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -66,7 +66,8 @@ const onClick=(e,item)=>{
 const openHtml = (item) => {
   if (!item.name) return;
   const path = item.name.split('.')[0];
-  const url=`https://vzation${path}.wsgawxl.top/`
+  // const url=`https://vzation${path}.wsgawxl.top/`
+  const url=`https://vzation${path}.netlify.app/`
   window.open(url, '_blank');
 };
 const handleClick=(e,item)=>{
@@ -74,7 +75,7 @@ const handleClick=(e,item)=>{
 }
 
 const VisualScreen = () => (
-    <Flex justify='space-around'  wrap gap="small">
+    <Flex justify='space-start'  wrap gap="small">
         { screenImages.map((item, index) => {
           const handleDropdownClick = (e) => {
             onClick(e, item);
