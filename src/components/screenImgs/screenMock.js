@@ -15,7 +15,7 @@ const generateScreenImages = () => {
     return {
       id: i,
       name: `${num}.png`,
-      path: `/screen/${num}.png`
+      path: `/screen/${num}.jpg`
     };
   });
 };

@@ -10,9 +10,6 @@
 const nextConfig = {
   // reactStrictMode: true,
   // output: 'export', // 关键配置
-  images: {
-    // unoptimized: true,
-  },
   // experimental: {
   //   esmExternals: false
   // },
@@ -20,6 +17,7 @@ const nextConfig = {
   //   API_URL: 'https://api.example.com',
   // },
   images: {
+    // unoptimized: true,
     formats: ['image/webp'],
     deviceSizes: [640, 1080, 1600]
   }
