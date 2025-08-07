@@ -1,3 +1,11 @@
+/*
+ * @Author: wushigui393 1783627061@qq.com
+ * @Date: 2025-04-24 14:45:05
+ * @LastEditors: wushigui393 1783627061@qq.com
+ * @LastEditTime: 2025-08-07 11:27:19
+ * @FilePath: \my-next-app\src\pages\layout\CommonHeader.js
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
 import React from 'react'
 import Link from 'next/link'
 import Image from "next/image"
@@ -24,7 +32,7 @@ const CommonHeader = () => {
       }}
     >
       <Link href={'/'}>
-        <Image width={80} height={38} src="/logo.png" alt='网站 logo'  />
+        <Image width={80} height={38} src="/logo.jpg" alt='网站 logo'  />
       </Link>
       <Menu
         theme="dark"

@@ -1,12 +1,9 @@
 {
   "name": "my-next-app",
-  "version": "0.1.0",
-  "private": true,
-  "type": "module",
-  "scripts": {
+  "version": "1.0.0",
+  "main": "index.js", "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
-    "compress-images": "node compress-images.cjs",
     "export": "npm run build && next export",
     "start": "next start",
     "lint": "next lint"
@@ -20,18 +17,18 @@
     "react-dom": "^19.1.0",
     "sass": "^1.86.3"
   },
-  "devDependencies": {
+   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
     "eslint": "^9",
     "eslint-config-next": "15.2.4",
-    "imagemin": "^9.0.1",
-    "imagemin-jpegtran": "^8.0.0",
-    "imagemin-mozjpeg": "^10.0.0",
-    "imagemin-pngquant": "^10.0.0",
-    "imagemin-svgo": "^11.0.1",
-    "next-optimized-images": "^2.6.2",
-    "sharp": "^0.34.3",
     "tailwindcss": "^4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/wu_shigui/next-js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }

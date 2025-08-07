@@ -16,6 +16,7 @@ import TopTab from '@/components/topTab.js'
 import CommonHeader from '@/pages/layout/CommonHeader'
 import CommonFooter from '@/pages/layout/CommonFooter.js'
 import VisualScreen from '@/components/visualScreen/index.js'
+import Home from '@/pages/home/index.jsx'
 
 const { Content } = Layout
 
@@ -26,15 +27,14 @@ const indexApp =memo(() => {
   ))
   return (
     <Layout>
-      <CommonHeader />
       <Content style={{ minHeight: '82vh', background: '#fff', overflow: 'auto' }}>
         {/* <TopTab dataSource={dataSource} />
         {cardList} */}
         <Suspense fallback={<div>Loading...</div>}>
-            <VisualScreen />
+            {/* <VisualScreen /> */}
+            <Home />
         </Suspense>
       </Content>
-      <CommonFooter />
     </Layout>
   )
 }) 
